@@ -1,0 +1,119 @@
+<html>
+<head>
+<title>W03: task 3</title>
+<title>フォームに入力された数値の取得</title>
+
+</head>
+
+<body>
+<script src="vec3.js"></script>
+
+
+
+
+ <label for="textForm1">x0の値</label>
+ <input type="number" id="textForm1">
+ <label for="textForm2">y0の値: </label>
+ <input type="number" id="textForm2">
+ <label for="textForm3">z0の値: </label>
+ <input type="number" id="textForm3">
+
+<label for="textForm4">x1の値</label>
+<input type="number" id="textForm4">
+<label for="textForm5">y1の値: </label>
+<input type="number" id="textForm5">
+<label for="textForm6">z1の値: </label>
+<input type="number" id="textForm6">
+
+<label for="textForm7">x2の値</label>
+<input type="number" id="textForm7">
+<label for="textForm8">y2の値: </label>
+<input type="number" id="textForm8">
+<label for="textForm9">z2の値: </label>
+<input type="number" id="textForm9">
+
+<button id = "button">取得する</button>
+
+
+ <label for="resultForm">取得した値v0: </label>
+    <input type="number" id="resultForm1">
+    <input type="number" id="resultForm2">
+    <input type="number" id="resultForm3">
+ <label for="resultForm">取得した値v1: </label>
+    <input type="number" id="resultForm4">
+    <input type="number" id="resultForm5">
+    <input type="number" id="resultForm6">
+ <label for="resultForm">取得した値v2: </label>
+    <input type="number" id="resultForm7">
+    <input type="number" id="resultForm8">
+    <input type="number" id="resultForm9">
+
+
+</body>
+
+<script>
+//ボタンの要素を取得
+var button = document.getElementById("button");
+
+// ボタンをクリックした時の処理
+button.addEventListener("click", function(e) {
+
+e.preventDefault();
+
+//入力ホームの取得
+var textForm1 = document.getElementById("textForm1").value;
+var textForm2 = document.getElementById("textForm2").value;
+var textForm3 = document.getElementById("textForm3").value;
+var textForm4 = document.getElementById("textForm4").value;
+var textForm5 = document.getElementById("textForm5").value;
+var textForm6 = document.getElementById("textForm6").value;
+var textForm7 = document.getElementById("textForm7").value;
+var textForm8 = document.getElementById("textForm8").value;
+var textForm9 = document.getElementById("textForm9").value;
+
+// 取得した値を別の入力フォームに表示（v０）
+var resultForm1 = document.getElementById("resultForm1");
+    resultForm1.value = textForm1;
+var resultForm2 = document.getElementById("resultForm2");
+    resultForm2.value = textForm2;
+var resultForm3 = document.getElementById("resultForm3");
+    resultForm3.value = textForm3;
+//取得した値を別の入力フォームに表示（v1)
+var resultForm4 = document.getElementById("resultForm4");
+    resultForm4.value = textForm4;
+var resultForm5 = document.getElementById("resultForm5");
+    resultForm5.value = textForm5;
+var resultForm6 = document.getElementById("resultForm6");
+    resultForm6.value = textForm6;
+// 取得した値を別の入力フォームに表示( v2)
+var resultForm7 = document.getElementById("resultForm7");
+    resultForm7.value = textForm7;
+var resultForm8 = document.getElementById("resultForm8");
+    resultForm8.value = textForm8;
+var resultForm9 = document.getElementById("resultForm9");
+    resultForm9.value = textForm9;
+
+});
+
+
+var x0=  document.getElementById("resultForm2").value;
+var y0 = document.getElementById("resultForm2").value; 
+var z0 = document.getElementById("resultForm3").value; // (input vertex 0)
+var x1 = document.getElementById("textForm4").value;
+var y1 = document.getElementById("textForm5").value; 
+var z1 = document.getElementById("textForm6").value; // (input vertex 1)
+var x2 = document.getElementById("textForm7").value;
+var y2 = document.getElementById("textForm8").value;
+var z2 = document.getElementById("textForm9").value; // (input vertex 2)
+var v0 = new Vec3( x0, y0, z0 );
+var v1 = new Vec3( x1, y1, z1 );
+var v2 = new Vec3( x2, y2, z2 );
+
+ document.write(v0);
+ document.write(v1);
+ document.write(v2);
+//var S = AreaOfTriangle( v0, v1, v2 ); // (output value)
+
+</script>
+</html>
+
