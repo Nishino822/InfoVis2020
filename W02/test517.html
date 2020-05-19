@@ -1,19 +1,98 @@
-<html>
+<!DOCTYPE html>
+<html lang="ja">
+ 
 <head>
-<title>W02: task3 06</title>
-<meta charset="utf-8"/>
+    <meta charset="UTF-8">
+    <title>フォームに入力された数値の取得</title>
+    <script  src="vec3.js"></script>
 </head>
+ 
 <body>
-<script src=“vec3.js”></script>
-<script>
+	<form>
+        <label for="textForm1">数値v0のx0: </label>
+        <input type="text" id="textForm1">
+ 
+        <label for="textForm2">数値v0のy0: </label>
+        <input type="text" id="textForm2">
 
+	<label for="textForm3">数値v0のz0: </label>
+        <input type="text" id="textForm3">
+　　
+　　　　<label for="textForm4">数値v1のx1: </label>
+        <input type="text" id="textForm4">
+　　　　
+　　　　<label for="textForm5">数値v1のy1: </label>
+        <input type="text" id="textForm5">
+　　　　
+　　　　<label for="textForm6">数値v1のz1: </label>
+        <input type="text" id="textForm6">
 
+	<label for="textForm7">数値v2のx2: </label>
+        <input type="text" id="textForm7">
 
+	<label for="textForm8">数値v0のy2: </label>
+        <input type="text" id="textForm8">
 
+	<label for="textForm9">数値v0のz2: </label>
+        <input type="text" id="textForm9">
 
+ 
+        <button id="button">三角形の面積計算</button>
+    </form>
+ 
+    <label for="resultForm">計算結果: </label>
+    <input type="text" id="resultForm">
 
+ <script  src="vec3.js"></script>
 
-
-</script>
 </body>
+ 
+<script>
+ 
+// ボタンの要素を取得
+var button = document.getElementById("button");
+ 
+// ボタンをクリックした時の処理
+button.addEventListener("click", function(e) {
+ 
+    e.preventDefault();
+ 
+    // 9つの入力フォームの値を取得
+    var x0 = document.getElementById("textForm1").value;
+    var y0 = document.getElementById("textForm2").value;
+    var z0 = document.getElementById("textForm3").value;
+    var x1 = document.getElementById("textForm4").value;
+    var y1 = document.getElementById("textForm5").value;
+    var z1 = document.getElementById("textForm6").value;
+    var x2 = document.getElementById("textForm7").value;
+    var y2 = document.getElementById("textForm8").value;
+    var y2 = document.getElementById("textForm9").value;
+   
+	// ベクトル形式に
+　  
+      var k0 =ParseInt(x0,10);
+       document.write(k0);　
+    //var k1 =ParseInt(y0);　
+    //var k2 =ParseInt(z0);　
+    //var k3 =ParseInt(x1);　
+    //var k4 =ParseInt(y1);　
+    //var k5 =ParseInt(z1);　
+    //var k6 =ParseInt(x2);　
+    //var k7 =ParseInt(y2);　
+    //var k8 =ParseInt(z2);　
+
+    var v0 = new Vec3( ParseInt(x0,10), ParseInt(y0,10), ParseInt(z0,10));
+    var v1 = new Vec3( ParseInt(x1,10), ParseInt(y1,10), ParseInt(z1,10));
+    var v2 = new Vec3( ParseInt(x2,10), ParseInt(y2,10), ParseInt(z2,10));
+    document.write(v0);
+    // 2つの数値を足す
+    //var s = AreaOfTriangre(v0,v1,v2);
+ 
+    // 足し算の結果を別の入力フォームに表示
+    var resultForm = document.getElementById("resultForm");
+    resultForm.value = x0;
+});
+ 
+</script>
+ 
 </html>

@@ -27,7 +27,7 @@ class Vec3
 var num = [x,y,z];
 num.sort(compareFunc);
      
-      return num[1];
+      return num[0];
     }
    
     mid(){
@@ -37,7 +37,7 @@ num.sort(compareFunc);
  
 var num = [x,y,z];
 num.sort(compareFunc);
-      return num[0];
+      return num[1];
 }
 
 }

@@ -63,6 +63,7 @@ e.preventDefault();
 //入力ホームの取得
 var textForm1 = document.getElementById("textForm1").value;
 var textForm2 = document.getElementById("textForm2").value;
+document.getElementById("textForm1").value;
 var textForm3 = document.getElementById("textForm3").value;
 var textForm4 = document.getElementById("textForm4").value;
 var textForm5 = document.getElementById("textForm5").value;
@@ -96,7 +97,7 @@ var resultForm9 = document.getElementById("resultForm9");
 });
 
 
-var x0=  document.getElementById("resultForm2").value;
+var x0=  parseFloat(textForm1);
 var y0 = document.getElementById("resultForm2").value; 
 var z0 = document.getElementById("resultForm3").value; // (input vertex 0)
 var x1 = document.getElementById("textForm4").value;

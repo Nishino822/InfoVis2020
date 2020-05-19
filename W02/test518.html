@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+ 
+<head>
+    <meta charset="UTF-8">
+    <title>フォームに入力された数値の取得</title>
+</head>
+ 
+<body>
+    <form>
+        <label for="textForm1">数値1: </label>
+        <input type="text" id="textForm1">
+ 
+        <label for="textForm2">数値2: </label>
+        <input type="text" id="textForm2">
+ 
+        <button id="button">足す</button>
+    </form>
+ 
+    <label for="resultForm">計算結果: </label>
+    <input type="text" id="resultForm">
+</body>
+ 
+<script>
+ 
+// ボタンの要素を取得
+var button = document.getElementById("button");
+ 
+// ボタンをクリックした時の処理
+button.addEventListener("click", function(e) {
+ 
+    e.preventDefault();
+ 
+    // 2つの入力フォームの値を取得
+    var textForm1 = document.getElementById("textForm1").value;
+    var textForm2 = document.getElementById("textForm2").value;
+ 
+    // 2つの数値を足す
+    
+  var sum = parseInt(textForm1, 10) + parseInt(textForm2, 10);
+
+ 
+    // 足し算の結果を別の入力フォームに表示
+    var resultForm = document.getElementById("resultForm");
+    resultForm.value = sum;
+});
+ 
+</script>
+ 
+</html>
