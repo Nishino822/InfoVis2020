@@ -76,6 +76,8 @@ function main()
     for ( var i = 0; i < nfaces; i++ )
     {
         var id = faces[i];
+	console.log(id);
+	console.log(nfaces);
         var face = new THREE.Face3( id[0], id[1], id[2] );
         geometry.faces.push( face );
     }
@@ -85,6 +87,8 @@ function main()
     for ( var i = 0; i < nfaces; i++ )
     {
         var id = faces[i];
+	console.log(id);
+
         var S0 = scalars[ id[0] ];
         var S1 = scalars[ id[1] ];
         var S2 = scalars[ id[2] ];
