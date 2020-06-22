@@ -7,7 +7,7 @@
 
 <!-- Create a div where the graph will take place -->
 <div id="my_dataviz"></div>
-
+This is not my date because I haven't any date to be published .
 
 <script>
 
@@ -30,7 +30,7 @@ d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_data
 
   // X axis: scale and draw:
   var x = d3.scaleLinear()
-      .domain([0, 10000])     // can use this instead of 1000 to have the max of data: d3.max(data, function(d) { return +d.price })
+      .domain([0, 1000])     // can use this instead of 1000 to have the max of data: d3.max(data, function(d) { return +d.price })
       .range([0, width]);
   svg.append("g")
       .attr("transform", "translate(0," + height + ")")
